@@ -1,3 +1,4 @@
+-- /Users/subhu/Desktop/Sem/Sem 6/DBMS Lab/DBMS-Lab/A2/20CS10064_A2.sql
 CREATE TABLE Physician(
     EmployeeID int NOT NULL,
     Name varchar(50),
