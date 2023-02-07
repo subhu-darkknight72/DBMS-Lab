@@ -1,0 +1,11 @@
+[Unit]
+Description=Homebrew generated unit for mysql
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=/opt/homebrew/opt/mysql/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql
+Restart=always
+WorkingDirectory=/opt/homebrew/var/mysql

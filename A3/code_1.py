@@ -29,11 +29,26 @@ try:
 	# relation.execute('CREATE TABLE Physician(EmployeeID int NOT NULL,Name varchar(50),Position varchar(50),SSN int,PRIMARY KEY(EmployeeID))')
 	c1 = input("Create and Fill Table (y/n)? ")
 	if c1=='y' or c1=='Y':
-		with open('cmd.txt') as f:
+		flag = 0
+		with open('table_create.txt') as f:
 			lines = [line.rstrip() for line in f]
 			for l in lines:
-				relation.execute(l)
-				cnx.commit()
+				try:
+					relation.execute(l)
+				except mysql.connector.Error as err:
+					if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+						flag = 1
+						# print("already exists.")
+					else:
+						print(err.msg)
+		if flag==0:
+			with open('table_fill.txt') as f:
+				lines = [line.rstrip() for line in f]
+				for l in lines:
+					relation.execute(l)
+					cnx.commit()
+		else:
+			print("Tables already present.")
 	
 	Q = dict()
 	with open('query.txt') as f:
