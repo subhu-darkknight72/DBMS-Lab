@@ -28,19 +28,19 @@ int main(int argc, char **argv){
     size_t len = 0;
     ssize_t read;
 
-    fp = fopen("query.txt", "r");
-    if (fp == NULL)
-        exit(EXIT_FAILURE);
+    mysql_query(con, "CREATE TABLE Physician( EmployeeID int NOT NULL, Name varchar(50), Position varchar(50), SSN int, PRIMARY KEY(EmployeeID));");
+    // fp = fopen("table_create.txt", "r");
+    // if (fp == NULL) exit(EXIT_FAILURE);
 
-    while ((read = getline(&line, &len, fp)) != -1) {
-        // printf("%s", line);
-        printf("Hello\n");
-    }
-
-    fclose(fp);
-    if (line)
-        free(line);
+    // while ((read = getline(&line, &len, fp)) != -1) {
+    //     // printf("%s", line);
+    //     // if (mysql_query(con, line))
+    //     //     finish_with_error(con);
+    //     mysql_query(con, line);
+    //     printf("Hello\n");
+    // }
+    // fclose(fp);
 
     mysql_close(con);
-    exit(0);
+    return 0;
 }
