@@ -12,7 +12,7 @@ int main(int argc, char **argv){
         exit(1);
     }
 
-    if (mysql_real_connect(con, "localhost", "root", "","testdb", 0, NULL, 0) == NULL){
+    if (mysql_real_connect(con, "localhost", "root", "","A3_C", 0, NULL, 0) == NULL){
         fprintf(stderr, "%s\n", mysql_error(con));
         mysql_close(con);
         exit(1);
@@ -41,10 +41,10 @@ int main(int argc, char **argv){
             "CREATE TABLE Undergoes(Patient INT NOT NULL,`Procedure` INT NOT NULL,Stay INT NOT NULL,`Date` TIMESTAMP,Physician INT NOT NULL,AssistingNurse INT,CONSTRAINT pk PRIMARY KEY(Patient, `Procedure`, Stay, `Date`),FOREIGN KEY(Patient) REFERENCES Patient(SSN),FOREIGN KEY(`Procedure`) REFERENCES `Procedure`(Code),FOREIGN KEY(Stay) REFERENCES Stay(StayID),FOREIGN KEY(Physician) REFERENCES Physician(EmployeeID),FOREIGN KEY(AssistingNurse) REFERENCES Nurse(EmployeeID));",
             "CREATE TABLE Trained_In(Physician INT NOT NULL,Treatment INT NOT NULL,CertificationDate TIMESTAMP,CertificationExpires TIMESTAMP,CONSTRAINT pk PRIMARY KEY(Physician, Treatment),FOREIGN KEY(Physician) REFERENCES Physician(EmployeeID),FOREIGN KEY(Treatment) REFERENCES `Procedure`(Code));"
         };
-        // for(int i=0; i<15; i++){
-        //     strcpy(qry,table_create[i]);
-        //     mysql_query(con, qry);
-        // }
+        for(int i=0; i<15; i++){
+            strcpy(qry,table_create[i]);
+            mysql_query(con, qry);
+        }
 
         char table_fill[133][1000] = {
             "INSERT INTO Physician VALUES(1,'Alan Donald','Intern',111111111);",
@@ -185,7 +185,7 @@ int main(int argc, char **argv){
             strcpy(qry,table_fill[i]);
             mysql_query(con, qry);
         }
-        printf("Database Filled!!");
+        printf("Database Filled!!\n");
     }
 
     char Q[12][1000] = {
@@ -228,7 +228,7 @@ int main(int argc, char **argv){
             strcpy(qry,"SELECT `Name` FROM Physician WHERE EmployeeID IN (SELECT Physician FROM Trained_In WHERE Treatment IN (    SELECT Code    FROM `Procedure`    WHERE `Name`='");
             strcat(qry, proc);
             strcat(qry, "'));");
-            printf("%s\n",qry);
+            // printf("%s\n",qry);
         }
         else
             strcpy(qry,Q[qno-1]);
@@ -240,10 +240,25 @@ int main(int argc, char **argv){
         }
 
         res = mysql_use_result(con);
-        /* Output table name */
-        // printf("MySQL Tables in mysql database:\n");
-        while ((row = mysql_fetch_row(res)) != NULL)
-          printf("%s \n", row[0]);
+        int num_fields = mysql_num_fields(res);
+        MYSQL_FIELD *fields = mysql_fetch_fields(res);
+        for (int i = 0; i < num_fields; i++) {
+            printf("%s\t\t", fields[i].name);
+        }
+        printf("\n");
+        int cnt=0;
+        while ((row = mysql_fetch_row(res)) != NULL){
+            for(int col=0; col<num_fields; col++)
+                printf("%s \t", row[col]);
+            printf("\n");
+            cnt++;
+        }
+
+        if(cnt==0){
+            for(int col=0; col<num_fields; col++)
+                printf("NULL \t\t");
+            printf("\n");
+        }
         
         /* close connection */
         mysql_free_result(res);

@@ -115,7 +115,7 @@ public class code_3 {
                 int cnt=0;
                 while (rs.next()) {
                     for (int i = 1; i <= columnCount; i++)
-                        System.out.print(rs.getString(i) + "\t\t");
+                        System.out.print(rs.getString(i) + "\t");
                     System.out.println();
                     cnt++;
                 }
