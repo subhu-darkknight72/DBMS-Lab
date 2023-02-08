@@ -1,5 +1,5 @@
 
-// java -cp ./mysql-connector-j-8.0.32.jar jdbc.java
+// 3
 import java.sql.*;
 import java.io.*;
 import java.util.*;
@@ -88,17 +88,16 @@ public class code_3 {
         System.out.println("Note: Enter 0 to terminate.");
         while(true){
             System.out.print("Enter Query No:");
-            int x = scn.nextInt();
+            // int x = scn.nextInt();
+            int x = Integer.parseInt(System.console().readLine());
             if(x==0)
                 break;
             String cmd;
             if(x==13){
-                Scanner scn1 = new Scanner(System.in);
                 System.out.print("Enter Procedure Type: ");
-                String proc = scn1.nextLine();
+                String proc = scn.nextLine();
                 cmd = "SELECT `Name` FROM Physician WHERE EmployeeID IN (SELECT Physician FROM Trained_In WHERE Treatment IN (    SELECT Code    FROM `Procedure`    WHERE `Name`='"+proc+"'));";
-                System.out.println(cmd);
-                scn1.close();
+                // System.out.println(cmd);
             }
             else
                 cmd = Q[x-1];
@@ -131,21 +130,7 @@ public class code_3 {
                 se.printStackTrace();
             }
         }
-        scn0.close();
         scn.close();
-
-        // try {
-        //     stmt = conn.createStatement();
-        //     String sql = "CREATE TABLE Physician( EmployeeID int NOT NULL, Name varchar(50), Position varchar(50), SSN int, PRIMARY KEY(EmployeeID))";
-        //     stmt.executeUpdate(sql);
-        //     System.out.println("Table created successfully...");
-        // } catch (SQLException se) {
-        //     // Handle errors for JDBC
-        //     se.printStackTrace();
-        // } catch (Exception e) {
-        //     // Handle errors for Class.forName
-        //     e.printStackTrace();
-        // }
 
         try {
             if (conn != null && !conn.isClosed()) {
