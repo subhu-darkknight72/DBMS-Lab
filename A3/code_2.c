@@ -1,6 +1,7 @@
 // gcc -o s code_2.c -Imysql -Lmysql/8.0.32/lib `mysql_config --libs`
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "mysql/8.0.32/include/mysql/mysql.h"
 
 int main(int argc, char **argv){
@@ -28,7 +29,9 @@ int main(int argc, char **argv){
     size_t len = 0;
     ssize_t read;
 
-    mysql_query(con, "CREATE TABLE Physician( EmployeeID int NOT NULL, Name varchar(50), Position varchar(50), SSN int, PRIMARY KEY(EmployeeID));");
+    char qry[1000];
+    strcpy(qry,"CREATE TABLE Physician( EmployeeID int NOT NULL, Name varchar(50), Position varchar(50), SSN int, PRIMARY KEY(EmployeeID));");
+    mysql_query(con, qry);
     // fp = fopen("table_create.txt", "r");
     // if (fp == NULL) exit(EXIT_FAILURE);
 
