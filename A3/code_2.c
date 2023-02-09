@@ -4,6 +4,8 @@
 #include <string.h>
 #include "mysql/8.0.32/include/mysql/mysql.h"
 
+const int w=20;
+
 int main(int argc, char **argv){
     MYSQL *con = mysql_init(NULL);
 
@@ -242,24 +244,56 @@ int main(int argc, char **argv){
         res = mysql_use_result(con);
         int num_fields = mysql_num_fields(res);
         MYSQL_FIELD *fields = mysql_fetch_fields(res);
+
         for (int i = 0; i < num_fields; i++) {
-            printf("%s\t\t", fields[i].name);
+            int l = strlen(fields[i].name);
+            for(int j=0; j<w;j++)
+                printf("-");
+        }
+        printf("\n");
+        
+        for (int i = 0; i < num_fields; i++) {
+            printf("%s", fields[i].name);
+            int l = strlen(fields[i].name);
+            for(int j=0; j<(w-l-1);j++)
+                printf(" ");
+            printf("|");
+        }
+        printf("\n");
+        for (int i = 0; i < num_fields; i++) {
+            int l = strlen(fields[i].name);
+            for(int j=0; j<w;j++)
+                printf("-");
         }
         printf("\n");
         int cnt=0;
         while ((row = mysql_fetch_row(res)) != NULL){
-            for(int col=0; col<num_fields; col++)
-                printf("%s \t", row[col]);
+            for(int col=0; col<num_fields; col++){
+                printf("%s", row[col]);
+                int l = strlen(row[col]);
+                for(int j=0; j<(w-l-1);j++)
+                    printf(" ");
+                printf("|");
+            }
             printf("\n");
             cnt++;
         }
 
         if(cnt==0){
-            for(int col=0; col<num_fields; col++)
-                printf("NULL \t\t");
+            for(int col=0; col<num_fields; col++){
+                printf("NULL");
+                for(int j=0; j<(w-5);j++)
+                    printf(" ");
+                printf("|");
+            }
             printf("\n");
         }
-        
+        for (int i = 0; i < num_fields; i++) {
+            int l = strlen(fields[i].name);
+            for(int j=0; j<w;j++)
+                printf("-");
+        }
+        printf("\n");
         /* close connection */
         mysql_free_result(res);
     }
