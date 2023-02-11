@@ -1,0 +1,141 @@
+===== Information about the build process: =====
+Build was run at 2022-12-16 15:58:32Z
+Build was done on Darwin-22.1.0 processor arm64
+Build was done using cmake 3.25.1
+
+===== CMAKE_GENERATOR =====
+Unix Makefiles
+
+===== Feature flags used: =====
+-- Cache values
+ADD_GDB_INDEX:BOOL=OFF
+BOOST_INCLUDE_DIR:PATH=/tmp/mysql-20230117-17175-16ldp5q/mysql-8.0.32/boost/boost_1_77_0
+BUNDLE_MECAB:BOOL=ON
+CHECK_ERRMSG_FORMAT:BOOL=OFF
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_INSTALL_PREFIX:PATH=/opt/homebrew/Cellar/mysql/8.0.32
+CMAKE_OSX_ARCHITECTURES:STRING=
+CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
+CMAKE_OSX_SYSROOT:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk
+CORESERVICES:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks/CoreServices.framework
+CRYPTO_LIBRARY:FILEPATH=/opt/homebrew/opt/openssl@1.1/lib/libcrypto.dylib
+CTAGS_EXECUTABLE:FILEPATH=/usr/bin/ctags
+CURL_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/libcurl.tbd
+DOWNLOAD_BOOST:BOOL=OFF
+DOWNLOAD_BOOST_TIMEOUT:STRING=600
+ENABLED_PROFILING:BOOL=ON
+ENABLE_EXPERIMENT_SYSVARS:BOOL=OFF
+ENABLE_GCOV:BOOL=OFF
+ENABLE_GPROF:BOOL=OFF
+ENABLE_MEMCACHED_SASL:BOOL=OFF
+ENABLE_MEMCACHED_SASL_PWDB:BOOL=OFF
+EXTRA_NAME_SUFFIX:STRING=
+FIDO_INCLUDE_DIR:PATH=/opt/homebrew/include
+FIDO_LIBRARY:FILEPATH=/opt/homebrew/lib/libfido2.dylib
+FORCE_INSOURCE_BUILD:BOOL=1
+FOUND_EDITLINE_READLINE:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include
+FPROFILE_GENERATE:BOOL=OFF
+FPROFILE_USE:BOOL=OFF
+GLOB_RECURSE_SQL_HEADERS:BOOL=OFF
+HANDLE_FATAL_SIGNALS:BOOL=ON
+HARNESS_NAME:STRING=mysqlrouter
+HAVE_LIBEVENT2:BOOL=1
+ICU_INCLUDE_DIR:PATH=/opt/homebrew/opt/icu4c/include
+ICU_LIB_PATH:FILEPATH=/opt/homebrew/opt/icu4c/lib/libicui18n.dylib
+INSTALL_LAYOUT:STRING=STANDALONE
+INSTALL_PKGCONFIGDIR:PATH=
+INSTALL_STATIC_LIBRARIES:BOOL=ON
+LBER_SYSTEM_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/liblber.tbd
+LDAP_SYSTEM_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/libldap_r.tbd
+LIBEVENT_CORE:FILEPATH=/opt/homebrew/lib/libevent_core.dylib
+LIBEVENT_EXTRA:FILEPATH=/opt/homebrew/lib/libevent_extra.dylib
+LIBEVENT_INCLUDE_DIRECTORY:PATH=/opt/homebrew/include
+LIBEVENT_OPENSSL:FILEPATH=/opt/homebrew/lib/libevent_openssl.dylib
+LIBEVENT_PTHREADS:FILEPATH=/opt/homebrew/lib/libevent_pthreads.dylib
+LOCAL_BOOST_DIR:FILEPATH=/tmp/mysql-20230117-17175-16ldp5q/mysql-8.0.32/boost/boost_1_77_0
+LOCAL_BOOST_ZIP:FILEPATH=LOCAL_BOOST_ZIP-NOTFOUND
+LZ4_INCLUDE_DIR:PATH=/opt/homebrew/include
+LZ4_SYSTEM_LIBRARY:FILEPATH=/opt/homebrew/lib/liblz4.dylib
+MINIMAL_RELWITHDEBINFO:BOOL=OFF
+MUTEXTYPE:STRING=event
+MYSQLX_GENERATE_DIR:STRING=/tmp/mysql-20230117-17175-16ldp5q/mysql-8.0.32/plugin/x/generated
+MYSQL_DATADIR:PATH=/opt/homebrew/var/mysql
+MYSQL_KEYRINGDIR:PATH=/opt/homebrew/Cellar/mysql/8.0.32/keyring
+MYSQL_MAINTAINER_MODE:BOOL=OFF
+MYSQL_ROUTER_INI:STRING=mysqlrouter.conf
+MYSQL_ROUTER_NAME:STRING=MySQL Router
+MY_DPKG_BUILDFLAGS:FILEPATH=MY_DPKG_BUILDFLAGS-NOTFOUND
+MY_RPM:FILEPATH=MY_RPM-NOTFOUND
+MY_UNAME:FILEPATH=/usr/bin/uname
+OPENSSL_EXECUTABLE:FILEPATH=/opt/homebrew/opt/openssl@1.1/bin/openssl
+OPENSSL_LIBRARY:FILEPATH=/opt/homebrew/opt/openssl@1.1/lib/libssl.dylib
+OPTIMIZE_DEBUG_BUILDS:BOOL=OFF
+RESOLV_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/libresolv.tbd
+ROUTER_DATADIR:STRING=/opt/homebrew/Cellar/mysql/8.0.32/var/lib/mysqlrouter
+ROUTER_INSTALL_LAYOUT:STRING=STANDALONE
+ROUTER_LOGDIR:STRING=/opt/homebrew/Cellar/mysql/8.0.32/.
+ROUTER_PLUGINDIR:STRING=/opt/homebrew/Cellar/mysql/8.0.32/lib/mysqlrouter
+ROUTER_RUNTIMEDIR:STRING=/opt/homebrew/Cellar/mysql/8.0.32/run
+RPC_INCLUDE_DIRS:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include
+SASL_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include
+SASL_SYSTEM_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/libsasl2.tbd
+SASL_SYSTEM_SCRAM_LIBRARY:FILEPATH=SASL_SYSTEM_SCRAM_LIBRARY-NOTFOUND
+TMPDIR:PATH=P_tmpdir
+USE_BISON_RESULTS_FROM_MAKE_DIST:BOOL=OFF
+USE_LD_LLD:BOOL=OFF
+WITH_ARCHIVE_STORAGE_ENGINE:BOOL=ON
+WITH_ASAN:BOOL=OFF
+WITH_AUTHENTICATION_CLIENT_PLUGINS:BOOL=OFF
+WITH_AUTHENTICATION_FIDO:BOOL=OFF
+WITH_AUTHENTICATION_KERBEROS:BOOL=OFF
+WITH_AUTHENTICATION_LDAP:BOOL=OFF
+WITH_BLACKHOLE_STORAGE_ENGINE:BOOL=ON
+WITH_BOOST:PATH=/tmp/mysql-20230117-17175-16ldp5q/mysql-8.0.32/boost
+WITH_CLIENT_PROTOCOL_TRACING:BOOL=ON
+WITH_CS_PROTOBUF:BOOL=OFF
+WITH_CURL:STRING=system
+WITH_DEBUG:BOOL=OFF
+WITH_DEFAULT_COMPILER_OPTIONS:BOOL=ON
+WITH_DEVELOPER_ENTILEMENTS:BOOL=OFF
+WITH_FEDERATED_STORAGE_ENGINE:BOOL=ON
+WITH_HYPERGRAPH_OPTIMIZER:BOOL=OFF
+WITH_INNODB_EXTRA_DEBUG:BOOL=OFF
+WITH_INNODB_MEMCACHED:BOOL=ON
+WITH_JEMALLOC:BOOL=OFF
+WITH_JSON_BINLOG_LIBRARY:BOOL=OFF
+WITH_LDAP:STRING=system
+WITH_LIBTOOL:BOOL=OFF
+WITH_LIBWRAP:BOOL=OFF
+WITH_LOCK_ORDER:BOOL=OFF
+WITH_LSAN:BOOL=OFF
+WITH_LTO:BOOL=OFF
+WITH_MECAB:STRING=
+WITH_MSAN:BOOL=OFF
+WITH_MYSQLX:BOOL=ON
+WITH_MYSQLX_USE_PROTOBUF_FULL:BOOL=OFF
+WITH_NDB:BOOL=OFF
+WITH_NGRAM_PARSER:BOOL=ON
+WITH_NUMA:BOOL=OFF
+WITH_ROUTER:BOOL=ON
+WITH_SASL:STRING=system
+WITH_SSL_PATH:PATH=/opt/homebrew/opt/openssl@1.1
+WITH_TCMALLOC:BOOL=OFF
+WITH_TCMALLOC_DEBUG:BOOL=OFF
+WITH_TEST_TRACE_PLUGIN:BOOL=OFF
+WITH_TSAN:BOOL=OFF
+WITH_UBSAN:BOOL=OFF
+WITH_UNIT_TESTS:BOOL=OFF
+WITH_VALGRIND:BOOL=OFF
+XPLUGIN_LOG_PROTOBUF:STRING=1
+ZSTD_INCLUDE_DIR:PATH=/opt/homebrew/include
+ZSTD_SYSTEM_LIBRARY:FILEPATH=/opt/homebrew/lib/libzstd.dylib
+
+===== Compiler flags used: =====
+CMAKE_BUILD_TYPE: Release
+Compiler: AppleClang 14.0.0.14000029
+COMPILE_DEFINITIONS: RAPIDJSON_NO_SIZETYPEDEFINE;RAPIDJSON_SCHEMA_USE_INTERNALREGEX=0;RAPIDJSON_SCHEMA_USE_STDREGEX=1;BOOST_NO_CXX98_FUNCTION_BASE;HAVE_CONFIG_H;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;_USE_MATH_DEFINES;LZ4_DISABLE_DEPRECATE_WARNINGS;HAVE_TLSv13
+CMAKE_C_FLAGS: -fno-omit-frame-pointer -ftls-model=initial-exec  -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Wwrite-strings -Wconditional-uninitialized -Wextra-semi -Wmissing-noreturn -Wunreachable-code-break -Wunreachable-code-return
+CMAKE_CXX_FLAGS: -std=c++17 -fno-omit-frame-pointer -ftls-model=initial-exec  -Wall -Wextra -Wformat-security -Wvla -Wundef -Wmissing-format-attribute -Woverloaded-virtual -Wcast-qual -Wno-null-conversion -Wno-unused-private-field -Wconditional-uninitialized -Wdeprecated -Wno-deprecated-declarations -Wno-shorten-64-to-32 -Wextra-semi -Wheader-hygiene -Wnon-virtual-dtor -Wundefined-reinterpret-cast -Wrange-loop-analysis -Winconsistent-missing-destructor-override -Winconsistent-missing-override -Wshadow-field
+CMAKE_C_FLAGS_RELEASE: -ffunction-sections -fdata-sections -O3 -DNDEBUG
+CMAKE_CXX_FLAGS_RELEASE: -ffunction-sections -fdata-sections -O3 -DNDEBUG
+===== EOF =====
