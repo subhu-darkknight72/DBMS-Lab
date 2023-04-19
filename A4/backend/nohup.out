@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/backend/scheduler.py", line 14, in <module>
+    run()
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/backend/scheduler.py", line 10, in run
+    schedule.run_pending()
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/schedule/__init__.py", line 780, in run_pending
+    default_scheduler.run_pending()
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/schedule/__init__.py", line 100, in run_pending
+    self._run_job(job)
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/schedule/__init__.py", line 172, in _run_job
+    ret = job.run()
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/schedule/__init__.py", line 661, in run
+    ret = self.job_func()
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/backend/utils/tasks.py", line 8, in send_weekly_email
+    from_email = settings.DEFAULT_FROM_EMAIL
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/django/conf/__init__.py", line 92, in __getattr__
+    self._setup(name)
+  File "/home/gr47/Desktop/iitkgp/sem6/DBMS-Lab/Assignment4/.env/lib/python3.10/site-packages/django/conf/__init__.py", line 72, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_FROM_EMAIL, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.

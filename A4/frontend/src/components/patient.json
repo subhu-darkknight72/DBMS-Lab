@@ -1,0 +1,170 @@
+{
+    "patients" : [
+        {
+            "ID": "P1001",
+            "Name": "John Doe",
+            "Age": "30",
+            "Address": "New York",
+            "Phone": "1234567890",
+            "Symptoms": "Fever, Cough, Cold",
+            "Prescription": "Paracetamol, 2 tablets, 3 times a day"
+        },
+        {
+            "ID": "P1002",
+            "Name": "Peter Williams",
+            "Age": "40",
+            "Address": "London",
+            "Phone": "0987654321",
+            "Symptoms": "Fever, Cough, Cold",
+            "Prescription": "Otrivin Nasal Spray, 1 spray, 3 times a day; Paracetamol, 2 tablets, 3 times a day"
+        },
+        {
+            "ID": "P1003",
+            "Name": "Sally Smith",
+            "Age": "50",
+            "Address": "Paris",
+            "Phone": "1234567890",
+            "Symptoms": "Fever, Cough, Cold",
+            "Prescription": "Paracetamol, 2 tablets, 3 times a day; Aspirin, 1 tablet, 2 times a day"
+        },
+        {
+            "ID": "P1004",
+            "Name": "Mark Ruffalo",
+            "Age": "60",
+            "Address": "Berlin",
+            "Phone": "0987654321",
+            "Symptoms": "Cold, Chest Pain",
+            "Prescription": "Otrivin Nasal Spray, 1 spray, 3 times a day; Paracetamol, 2 tablets, 3 times a day"
+        },
+        {
+            "ID": "P1005",
+            "Name": "David Attenborough",
+            "Age": "70",
+            "Address": "New York",
+            "Phone": "1234567890",
+            "Symptoms": "Difficulty in Breathing, Chest Pain, Cough",
+            "Prescription": "Paracetamol, 2 tablets, 3 times a day; Aspirin, 1 tablet, 2 times a day"
+        },
+        {
+            "ID": "P1006",
+            "Name": "Paul Walker",
+            "Age": "80",
+            "Address": "London",
+            "Phone": "0987654321",
+            "Symptoms": "Bad Breath",
+            "Prescription": "Otrivin Nasal Spray, 1 spray, 3 times a day; Paracetamol, 2 tablets, 3 times a day"
+        },
+        {
+            "ID": "P1007",
+            "Name": "Mary Jane",
+            "Age": "90",
+            "Address": "Paris",
+            "Phone": "1234567890",
+            "Prescription": ""
+        },
+        {
+            "ID": "P1008",
+            "Name": "Steve Rogers",
+            "Age": "100",
+            "Address": "Berlin",
+            "Phone": "0987654321",
+            "Prescription": "Paracetamol, 2 tablets, 3 times a day; Aspirin, 1 tablet, 2 times a day"
+        },
+        {
+            "ID": "P1009",
+            "Name": "John Cena",
+            "Age": "110",
+            "Address": "New York",
+            "Phone": "1234567890",
+            "Prescription": "Otrivin Nasal Spray, 1 spray, 3 times a day; Paracetamol, 2 tablets, 3 times a day"
+        },
+        {
+            "ID": "P1010",
+            "Name": "Peter Parker",
+            "Age": "120",
+            "Address": "London",
+            "Phone": "0987654321",
+            "Prescription": "Paracetamol, 2 tablets, 3 times a day; Aspirin, 1 tablet, 2 times a day"
+        },
+        {
+            "ID": "P1011",
+            "Name": "Harry Potter",
+            "Age": "130",
+            "Address": "Paris",
+            "Phone": "1234567890",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1012",
+            "Name": "Michael Jackson",
+            "Age": "140",
+            "Address": "Berlin",
+            "Phone": "0987654321",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1013",
+            "Name": "Stevie McSwindler",
+            "Age": "150",
+            "Address": "New York",
+            "Phone": "1234567890",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1014",
+            "Name": "Paul McCartney",
+            "Age": "160",
+            "Address": "London",
+            "Phone": "0987654321",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1015",
+            "Name": "Marilyn Monroe",
+            "Age": "170",
+            "Address": "Paris",
+            "Phone": "1234567890",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1016",
+            "Name": "Mark Zuckerberg",
+            "Age": "180",
+            "Address": "Berlin",
+            "Phone": "0987654321",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1017",
+            "Name": "John Smith",
+            "Age": "190",
+            "Address": "New York",
+            "Phone": "1234567890",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1018",
+            "Name": "Regina Phalange",
+            "Age": "200",
+            "Address": "London",
+            "Phone": "0987654321",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1019",
+            "Name": "Willem Dafoe",
+            "Age": "210",
+            "Address": "Paris",
+            "Phone": "1234567890",
+            "Prescription" : ""
+        },
+        {
+            "ID": "P1020",
+            "Name": "Peter Griffin",
+            "Age": "220",
+            "Address": "Berlin",
+            "Phone": "0987654321",
+            "Prescription" : ""
+        }
+    ]
+}

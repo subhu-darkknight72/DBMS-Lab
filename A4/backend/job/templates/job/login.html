@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'job/new.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST" id="login-form">
+            <div class="cont">
+                <div class="form sign-in">
+                    <figure class="image is-128x128" style="margin-bottom: 50px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/1200px-IIT_Kharagpur_Logo.svg.png"
+                            alt="">
+                    </figure>
+                    <h2>Welcome back!</h2>
+                    {% csrf_token %}
+                    <label class="lab">
+                        <input class="input is-warning" type="text" name="username" placeholder="Enter your username" />
+                    </label>
+                    <label class="lab">
+                        <input class="input is-warning" type="password" name="password" placeholder="Enter password" />
+                    </label>
+                    <button type="submit" class="button is-warning is-focused"
+                        style="max-width: 90px; margin-top: 15px;">LOG IN</button>
+                </div>
+                <div class="sub-cont">
+                    <div class="imgr">
+                        <div class="img__text m--up">
+                            <div class="side-text">
+                                <h2>Hospital Management System</h2>
+                                <p>Welcome to the Hospital Management System, developed by third year undergrads from
+                                    the
+                                    Department of Computer Science and Engineering, IIT Kharagpur. Here's a haiku poem
+                                    on
+                                    hospitals by ChatGPT:</p>
+                                <p style="font-style: italic;">
+                                    "In hospital gowns, we all look like Jedi knights, but with less power."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'job/new.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{% extends "job/base.html" %} 
+{% block content %}
+<div>
+  <form method="POST" id="register-form">
+    {% csrf_token %}
+    <fieldset>
+      <legend>Add User</legend>
+      {{ form.as_p }}
+      <label for="job">Choose a Designation:</label>
+      <select name="job" id="job" form="register-form">
+        <option value="doctor">Doctor</option>
+        <option value="deo">Deo</option>
+        <option value="fdo">Fdo</option>
+        <option value="da">Da</option>
+      </select>
+    </fieldset>
+    <div>
+      <button type="sumbit">Add User</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
